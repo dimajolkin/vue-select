@@ -114,7 +114,8 @@
       'option:selecting',
       'option:selected',
       'option:deselecting',
-      'option:deselected'
+      'option:deselected',
+      'clear'
     ],
 
     props: {
@@ -706,6 +707,7 @@
        * @return {void}
        */
       clearSelection() {
+        this.$emit('clear');
         this.updateValue(this.multiple ? [] : null)
       },
 
